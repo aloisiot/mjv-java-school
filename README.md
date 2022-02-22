@@ -1,2 +1,2 @@
 # mjv-java-school
-Curso de java oferecido pela MJV
+Curso de básico com foco nos fundamentos do desenvolvimento de sistemas usando a linguagem **Java**.
