@@ -123,7 +123,7 @@ public class DecimalFormatExemple {
         DecimalFormat frDecimalFormat = (DecimalFormat) frFormat;
         frDecimalFormat.applyPattern(pattern);
 
-        System.out.println(Locale.US + " " + usDecimalFormat.format(value)); //> en_US 2,005.234
+        System.out.println(Locale.US + " " + usDecimalFormat.format(value)); //> en_US 2,005.23
         System.out.println(Locale.FRANCE + " " + frDecimalFormat.format(value)); //> fr_FR 2 005,23
     }
 }
