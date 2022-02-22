@@ -31,7 +31,7 @@ public class FormmatterExemple {
     }
 }
 ```
-[Código fonte](./src/exemple/util/FormatterExemple.java)
+[Código fonte](./src/util/FormatterExemple.java)
 
 ### Alguns métodos da classe java.util.Formatter
 
@@ -50,7 +50,7 @@ Essa classe fornece meios para formatação de data e hora em um aplicativo com 
 Exemplo de código:
 
 ```java
-package exemple.time;
+package time;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -77,7 +77,7 @@ public class DateTimeFormatterExemple {
 }
 ```
 
-[Código fonte](./src/exemple/time/DateTimeFormatterExemple.java)
+[Código fonte](./src/time/DateTimeFormatterExemple.java)
 
 ### Alguns formatadores com estilos predefinidos
 - `ofLocalizedDate(dateStyle)`: Formatador com estilo de data da localidade;
@@ -100,7 +100,7 @@ DecimalFormat é uma subclasse de NumberFormat que possui diversos recursos para
 Exemplo de código:
 
 ```java
-package exemple.text;
+package text;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -129,7 +129,7 @@ public class DecimalFormatExemple {
 }
 ```
 
-[Código fonte](./src/exemple/text/DecimalFormatExemple.java)
+[Código fonte](./src/text/DecimalFormatExemple.java)
 
 ### Caracters curinga na formatação
 - `0`: Representa um dígito, caso não esteja presente um 0 é adicionado;

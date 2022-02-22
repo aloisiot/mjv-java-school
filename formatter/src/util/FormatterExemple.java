@@ -1,4 +1,4 @@
-package exemple.util;
+package util;
 
 import java.util.Formatter;
 
