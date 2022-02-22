@@ -81,7 +81,7 @@ public class DateTimeFormatterExemple {
 
 ### Alguns formatadores com estilos predefinidos
 - `ofLocalizedDate(dateStyle)`: Formatador com estilo de data da localidade;
-- `oofLocalizedTime(timeStyle)`: Formatador com estilo de hora da localidade;
+- `ofLocalizedTime(timeStyle)`: Formatador com estilo de hora da localidade;
 - `ISO_LOCAL_DATE`: Data Local ISO;
 
 ### FormatStyle
