@@ -7,7 +7,7 @@ import java.util.Locale;
 public class DecimalFormatExemple {
     public static void main(String[] args) {
         double value = 2005.234;
-        String pattern = "#,##0.00";
+        String pattern = "#,000.00";
 
         String formatedNumber = new DecimalFormat(pattern).format(00005.234);
         System.out.println(formatedNumber); //> 5,23

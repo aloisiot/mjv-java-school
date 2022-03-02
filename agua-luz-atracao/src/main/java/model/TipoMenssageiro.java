@@ -1,6 +1,6 @@
 package model;
 
-public enum TipoNotificacao {
+public enum TipoMenssageiro {
     SMS,
     WHATSAPP
 }
