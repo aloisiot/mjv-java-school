@@ -5,38 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15da42eb-8b29-4cfe-b8cd-c4c3bb58aea7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/src/main/java/app/AguaLuzAtracaoApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/src/main/java/model/cadastro/Cadastro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/src/main/java/model/cadastro/Endereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/src/main/java/model/cadastro/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/src/main/java/model/contrato/Contrato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/src/main/java/model/contrato/ServiceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/src/main/java/repository/ContratoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agua-luz-atracao/src/main/java/util/TextFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/model/ServiceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/service/IMesseger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/service/MessagerFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/service/MessagerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/service/SmsMessager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/service/WhatsAppMessager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/util/TextFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/formatter/src/text/DecimalFormatExemple.java" beforeDir="false" afterPath="$PROJECT_DIR$/formatter/src/text/DecimalFormatExemple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mjv-java-school.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/NotificationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/NotificationApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/model/Cadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/model/Cadastro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/model/Contrato.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/model/Contrato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/model/TipoNotificacao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/service/TranmissorSms.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/service/TransmissorMensagem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/service/TransmissorWhatsApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/NotificacaoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/NotificacaoApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

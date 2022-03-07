@@ -13,13 +13,8 @@ public class NotificacaoApp {
     public static void main(String[] args) throws IOException {
         System.out.println("\n");
 
-        // Instanciando mensageiro SMS
+        // Instanciando mensageiro como SMS
         MessagerFacade messeger = new MessagerFacade("2342342", MessagerType.SMS);
-//        messeger.send(message);
-
-        // Alterando mensageiro para WHATSAPP
-        messeger.setMessegerType(MessagerType.WHATSAPP);
-//        messeger.send(message);
 
         File file = new File(path);
 
@@ -28,10 +23,11 @@ public class NotificacaoApp {
                 StringBuilder contratoSB = new StringBuilder();
                 List<String> lines =  Files.readAllLines(Path.of(path + "/" + f.getName()));
 
-
                 if(lines.get(0).equalsIgnoreCase("SMS")) {
+                    // Alterando mensageiro para SMS
                     messeger.setMessegerType(MessagerType.SMS);
                 } else {
+                    // Alterando mensageiro para WHATSAPP
                     messeger.setMessegerType(MessagerType.WHATSAPP);
                 }
 

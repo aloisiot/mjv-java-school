@@ -42,8 +42,4 @@ public abstract class FormatadorDeTexto {
         novaString = cortar(novaString, comprimento);
         return novaString;
     }
-    public static void main(String[] args) {
-        String nomeCompleto = "Gleyson Sampaio de Oliveira";
-        System.out.println(cortar(nomeCompleto, 30));
-    }
 }
