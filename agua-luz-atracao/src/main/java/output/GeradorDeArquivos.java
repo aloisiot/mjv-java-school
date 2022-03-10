@@ -67,23 +67,23 @@ public class GeradorDeArquivos {
 
             conteudo.append(String.format( template.getValor() + "\n",
                     pessoa.getCpf(),
-                    FormatadorDeTexto.ajustar(pessoa.getNome(), 30).toUpperCase(Locale.ROOT),
+                    FormatadorDeTexto.ajustar(pessoa.getNome(), 30),
                     pessoa.getRg(),
                     pessoa.getPais().getSigla(),
                     pessoa.getTelefone(),
-                    FormatadorDeTexto.ajustar(endereco.getCidade(), 20).toUpperCase(Locale.ROOT),
+                    FormatadorDeTexto.ajustar(endereco.getCidade(), 20),
                     endereco.getCep(),
-                    FormatadorDeTexto.ajustar(endereco.getLogradouro(), 30).toUpperCase(Locale.ROOT),
+                    FormatadorDeTexto.ajustar(endereco.getLogradouro(), 30),
                     FormatadorDeTexto.ajustar(endereco.getNumero(), 5),
-                    FormatadorDeTexto.ajustar(endereco.getBairro(), 20).toUpperCase(Locale.ROOT),
-                    FormatadorDeTexto.ajustar(endereco.getEstado(), 2).toUpperCase(Locale.ROOT),
+                    FormatadorDeTexto.ajustar(endereco.getBairro(), 20),
+                    FormatadorDeTexto.ajustar(endereco.getEstado(), 2),
                     new DecimalFormat("0000000000").format(ct.getProtocolo()),
                     DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").format(ct.getDataHora()),
-                    FormatadorDeTexto.ajustar(ct.getTipoServico().getValue(), 4).toUpperCase(Locale.ROOT),
+                    FormatadorDeTexto.ajustar(ct.getTipoServico().getValue(), 4),
                     new DecimalFormat("0000.00").format(valorServico)
             ));
         }
-        return conteudo.toString();
+        return conteudo.toString().toUpperCase(Locale.ROOT);
     }
 
     private enum TipoTemplate {
