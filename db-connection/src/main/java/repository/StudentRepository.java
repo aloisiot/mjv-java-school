@@ -11,7 +11,7 @@ public class StudentRepository {
 
     public Student save (Student student, Connection connection) throws SQLException {
         PreparedStatement statement;
-        String query = "INSERT INTO tb_student (nome, sobrenome) VALUES (?, ?);";
+        String query = "INSERT INTO tb_student (name, last_name) VALUES (?, ?);";
         statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         statement.setString(1, student.getName());
         statement.setString(2, student.getLastName());
@@ -63,7 +63,7 @@ public class StudentRepository {
     public Student update (Student student, Connection connection) throws SQLException {
         Statement statement = DBConnector.getConnection().createStatement();
         String query = String.format(
-            "UPDATE tb_student SET nome= '%s', sobrenome = '%s' WHERE student_id = %d;",
+            "UPDATE tb_student SET name= '%s', last_name = '%s' WHERE student_id = %d;",
             student.getName(),
             student.getLastName(),
             student.getId()
