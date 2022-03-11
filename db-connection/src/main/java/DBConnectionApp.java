@@ -15,23 +15,23 @@ public class DBConnectionApp {
         student.setLastName("Soares");
 
         StudentRepository repository = new StudentRepository();
-        student = repository.save(student, connection);
+        student = repository.save(student, connection); // criação
         System.out.println(student.getId());
 
 
         student.setName("Marcia");
         student.setId(1);
-        student = repository.update(student,  connection);
+        student = repository.update(student,  connection); // atualização
         System.out.println(student.getName());
 
-        student = repository.find(1, connection);
+        student = repository.find(1, connection); // busca por id
         System.out.println(student.getId());
         System.out.println(student.getName());
 
-        List<Student> students = repository.findAll(connection);
+        List<Student> students = repository.findAll(connection); // busca todos
         System.out.println(students.size());
 
-        repository.delete(2, connection);
+        repository.delete(2, connection); // exclusão
         connection.close();
     }
 }
