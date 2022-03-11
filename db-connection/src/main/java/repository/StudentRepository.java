@@ -1,6 +1,6 @@
 package repository;
 
-import dataSource.DBConnector;
+import daraBaseSource.DBConnector;
 import model.Student;
 
 import java.sql.*;
