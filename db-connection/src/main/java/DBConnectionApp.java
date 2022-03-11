@@ -24,7 +24,7 @@ public class DBConnectionApp {
         student = repository.update(student,  connection);
         System.out.println(student.getName());
 
-        student = repository.find(4, connection);
+        student = repository.find(1, connection);
         System.out.println(student.getId());
         System.out.println(student.getName());
 
