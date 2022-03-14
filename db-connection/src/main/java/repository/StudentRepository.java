@@ -1,6 +1,6 @@
 package repository;
 
-import daraBaseSource.DBConnector;
+import static daraBaseSource.DBConnector.getConnection;
 import model.Student;
 
 import java.sql.*;
@@ -8,13 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentRepository {
-    private Connection connection;
-
-    public StudentRepository() throws SQLException {
-        this.connection = DBConnector.getConnection();
-    }
 
     public Student save (Student student) throws SQLException {
+        Connection connection = getConnection();
         PreparedStatement statement;
         String query = "INSERT INTO tb_student (name, last_name) VALUES (?, ?);";
         statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
@@ -32,6 +28,7 @@ public class StudentRepository {
     }
 
     public Student find (Integer id) throws SQLException {
+        Connection connection = getConnection();
         Student student = new Student();
         String query = "SELECT * FROM tb_student WHERE student_id = ?;";
         PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
@@ -50,6 +47,7 @@ public class StudentRepository {
     }
 
     public List<Student> findAll () throws SQLException {
+        Connection connection = getConnection();
         List<Student> students = new ArrayList<>();
         Statement statement = connection.createStatement();
         String query = "SELECT * FROM tb_student;";
@@ -68,6 +66,7 @@ public class StudentRepository {
     }
 
     public Student update (Student student) throws SQLException {
+        Connection connection = getConnection();
         String query = "UPDATE tb_student SET name= ?, last_name = ? WHERE student_id = ?;";
         PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         statement.setString(1, student.getName());
@@ -88,6 +87,7 @@ public class StudentRepository {
     }
 
     public void delete (Integer id) throws SQLException {
+        Connection connection = getConnection();
         PreparedStatement statement;
         statement = connection.prepareStatement("DELETE FROM tb_student WHERE student_id = ?;");
         statement.setInt(1, id);

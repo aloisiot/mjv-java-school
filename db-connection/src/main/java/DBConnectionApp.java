@@ -1,3 +1,4 @@
+import daraBaseSource.DBConnector;
 import model.Student;
 import repository.StudentRepository;
 
@@ -31,5 +32,7 @@ public class DBConnectionApp {
         System.out.println(students.stream().filter(student1 -> student1.getId() == 1).findFirst().get().getName());
 
         repository.delete(2); // exclusão
+
+        DBConnector.getConnection().close(); // finalizando a conexao
     }
 }
