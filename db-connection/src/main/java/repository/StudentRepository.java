@@ -8,8 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentRepository {
+    private Connection connection;
 
-    public Student save (Student student, Connection connection) throws SQLException {
+    public StudentRepository() throws SQLException {
+        this.connection = DBConnector.getConnection();
+    }
+
+    public Student save (Student student) throws SQLException {
         PreparedStatement statement;
         String query = "INSERT INTO tb_student (name, last_name) VALUES (?, ?);";
         statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
@@ -26,11 +31,13 @@ public class StudentRepository {
         return student;
     }
 
-    public Student find (Integer id, Connection connection) throws SQLException {
+    public Student find (Integer id) throws SQLException {
         Student student = new Student();
-        Statement statement = DBConnector.getConnection().createStatement();
-        String query = String.format("SELECT * FROM tb_student WHERE student_id = %d;", id);
-        ResultSet resultSet = statement.executeQuery(query);
+        String query = "SELECT * FROM tb_student WHERE student_id = ?;";
+        PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        statement.setInt(1, id);
+        statement.execute();
+        ResultSet resultSet = statement.getResultSet();
 
         if(resultSet.next()) {
             student.setId(resultSet.getInt(1));
@@ -42,10 +49,10 @@ public class StudentRepository {
         return student;
     }
 
-    public List<Student> findAll (Connection connection) throws SQLException {
+    public List<Student> findAll () throws SQLException {
         List<Student> students = new ArrayList<>();
-        Statement statement = DBConnector.getConnection().createStatement();
-        String query = "SELECT * FROM tb_student";
+        Statement statement = connection.createStatement();
+        String query = "SELECT * FROM tb_student;";
         ResultSet resultSet = statement.executeQuery(query);
 
         while(resultSet.next()) {
@@ -60,15 +67,13 @@ public class StudentRepository {
         return students;
     }
 
-    public Student update (Student student, Connection connection) throws SQLException {
-        Statement statement = DBConnector.getConnection().createStatement();
-        String query = String.format(
-            "UPDATE tb_student SET name= '%s', last_name = '%s' WHERE student_id = %d;",
-            student.getName(),
-            student.getLastName(),
-            student.getId()
-        );
-        statement.execute(query, Statement.RETURN_GENERATED_KEYS);
+    public Student update (Student student) throws SQLException {
+        String query = "UPDATE tb_student SET name= ?, last_name = ? WHERE student_id = ?;";
+        PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        statement.setString(1, student.getName());
+        statement.setString(2, student.getLastName());
+        statement.setInt(3, student.getId());
+        statement.executeUpdate();
         ResultSet resultSet = statement.getGeneratedKeys();
 
         if(resultSet.next()) {
@@ -82,9 +87,9 @@ public class StudentRepository {
         return student;
     }
 
-    public void delete (Integer id, Connection connection) throws SQLException {
+    public void delete (Integer id) throws SQLException {
         PreparedStatement statement;
-        statement = connection.prepareStatement("DELETE FROM tb_student WHERE student_id = ?");
+        statement = connection.prepareStatement("DELETE FROM tb_student WHERE student_id = ?;");
         statement.setInt(1, id);
         statement.execute();
         statement.close();
